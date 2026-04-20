@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACS Alerta - Portal de Apresentações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #004e92;
+            --secondary: #000428;
+            --accent: #00d2ff;
+            --text-main: #1a1a1a;
+            --bg-light: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.7);
+            --shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top right, #e0f2fe, #f8fafc);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .background-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(0, 78, 146, 0.1), rgba(0, 210, 255, 0.1));
+            filter: blur(100px);
+            z-index: -1;
+            border-radius: 50%;
+            animation: float 20s infinite alternate;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-10%, -10%); }
+            100% { transform: translate(10%, 10%); }
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 24px;
+            filter: drop-shadow(0 10px 20px rgba(0, 78, 146, 0.2));
+        }
+
+        .title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .city-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 40px;
+            padding: 60px 40px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .city-card:nth-child(1) { animation-delay: 0.2s; }
+        .city-card:nth-child(2) { animation-delay: 0.4s; }
+
+        @keyframes popIn {
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .city-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+        }
+
+        .city-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+        }
+
+        .city-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .city-tag {
+            background: #e2e8f0;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            margin-top: 80px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            opacity: 0;
+            animation: fadeIn 0.8s forwards 1s;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blob"></div>
+    
+    <div class="container">
+        <header class="header">
+            <img src="assets/logo-acs.png" alt="ACS Alerta" class="logo">
+            <h1 class="title">Portfólio de Apresentações</h1>
+            <p class="subtitle">Selecione o município para visualizar a proposta tecnológica personalizada.</p>
+        </header>
+
+        <div class="grid">
+            <a href="pindoretama/index.html" class="city-card">
+                <div class="city-icon">🌊</div>
+                <h2 class="city-name">Pindoretama</h2>
+                <span class="city-tag">Ceará</span>
+            </a>
+
+            <a href="cascavel/index.html" class="city-card">
+                <div class="city-icon">⛰️</div>
+                <h2 class="city-name">Cascavel</h2>
+                <span class="city-tag">Ceará</span>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 ACS Alerta & Agente Ativo. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

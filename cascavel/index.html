@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACS Alerta & Agente Ativo - Cascavel</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <img src="../assets/logo-acs.png" alt="Logo ACS Alerta" class="logo__img">
+                <span class="logo__text">ACS ALERTA</span>
+            </div>
+            <nav class="nav">
+                <a href="#proposta" class="nav__link">Proposta</a>
+                <a href="#fluxo" class="nav__link">Como Funciona</a>
+                <a href="#impacto" class="nav__link">Impacto</a>
+                <a href="#contato" class="nav__cta">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content reveal">
+                    <span class="badge">Inovação em Saúde Pública</span>
+                    <h1 class="hero__title">Cascavel na vanguarda da <span class="text-gradient">Saúde Digital</span></h1>
+                    <p class="hero__description">
+                        O projeto <strong>ACS Alerta & Agente Ativo</strong> conecta agentes de saúde, UBS e gestão em tempo real, salvando vidas e otimizando recursos públicos.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#proposta" class="btn btn--primary">Descobrir o Projeto</a>
+                        <a href="#contato" class="btn btn--secondary">Solicitar Demonstração</a>
+                    </div>
+                </div>
+                <div class="hero__image reveal">
+                    <video controls playsinline>
+                        <source src="../assets/hero-video.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+            </div>
+            <div class="hero__background"></div>
+        </section>
+
+        <section id="proposta" class="section propuesta">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Eficiência que Salva</h2>
+                    <p class="section-subtitle">Transformando o atendimento básico através da tecnologia ativa.</p>
+                </div>
+                
+                <div class="proposta__grid">
+                    <div class="card reveal" style="--delay: 0.1s">
+                        <div class="card__icon card__icon--blue">01</div>
+                        <h3 class="card__title">Coleta em Tempo Real</h3>
+                        <p class="card__text">Dados inseridos pelo Agente Ativo são transmitidos instantaneamente para a unidade central.</p>
+                    </div>
+                    <div class="card reveal" style="--delay: 0.2s">
+                        <div class="card__icon card__icon--emerald">02</div>
+                        <h3 class="card__title">Alertas Imediatos</h3>
+                        <p class="card__text">Casos de risco disparam alertas para a UBS local, agilizando a intervenção médica necessária.</p>
+                    </div>
+                    <div class="card reveal" style="--delay: 0.3s">
+                        <div class="card__icon card__icon--purple">03</div>
+                        <h3 class="card__title">Gestão Inteligente</h3>
+                        <p class="card__text">Painéis analíticos permitem decisões baseadas em dados concretos para toda a Secretaria de Saúde.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fluxo" class="section section--dark flowchart">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Fluxo de Dados</h2>
+                    <p class="section-subtitle">Integração total do agente à central de comando.</p>
+                </div>
+                <div class="flowchart__visual reveal">
+                    <img src="../assets/fluxo-sistema-acs.png" alt="Fluxo do Sistema ACS" class="flowchart__img">
+                </div>
+            </div>
+        </section>
+
+        <section id="impacto" class="section impacto">
+            <div class="container impacto__container">
+                <div class="impacto__content reveal">
+                    <h2 class="section-title">Resultados Mensuráveis</h2>
+                    <ul class="impacto__list">
+                        <li>
+                            <div class="impacto__icon">✓</div>
+                            <div>
+                                <strong>Redução Crítica de Custos:</strong> Menos gastos com internações evitáveis através do monitoramento preventivo.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="impacto__icon">✓</div>
+                            <div>
+                                <strong>Gestão Farmacêutica:</strong> Controle rigoroso da medicação para evitar desperdícios e faltas.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="impacto__icon">✓</div>
+                            <div>
+                                <strong>Cidade Inteligente:</strong> Cascavel consolidando o uso de BIG DATA na saúde pública.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="impacto__visual reveal">
+                    <img src="../assets/agente-ativo-3d.png" alt="Agente Ativo 3D" class="impacto__img">
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section contact">
+            <div class="container">
+                <div class="contact__card reveal">
+                    <h2 class="contact__title">Pronto para transformar a saúde municipal?</h2>
+                    <p class="contact__text">Entre em contato com nossa equipe técnica para uma apresentação detalhada.</p>
+                    <div class="contact__info">
+                        <span class="contact__label">Email Direto</span>
+                        <a href="mailto:ACSalerta@proton.me" class="contact__email">ACSalerta@proton.me</a>
+                        <p class="contact__att">A/C: Sr. Pacífico</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-bottom">
+        <div class="container footer-bottom__container">
+            <p>&copy; 2026 ACS Alerta. Todos os direitos reservados.</p>
+            <p>Projeto Desenvolvido para Cascavel.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
