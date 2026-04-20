@@ -95,7 +95,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-top: 40px;
         }
@@ -120,6 +120,7 @@
 
         .city-card:nth-child(1) { animation-delay: 0.2s; }
         .city-card:nth-child(2) { animation-delay: 0.4s; }
+        .city-card:nth-child(3) { animation-delay: 0.6s; }
 
         @keyframes popIn {
             to { opacity: 1; transform: scale(1); }
@@ -189,6 +190,12 @@
             <a href="cascavel/index.html" class="city-card">
                 <div class="city-icon">⛰️</div>
                 <h2 class="city-name">Cascavel</h2>
+                <span class="city-tag">Ceará</span>
+            </a>
+
+            <a href="aquiraz/index.html" class="city-card">
+                <div class="city-icon">🏖️</div>
+                <h2 class="city-name">Aquiraz</h2>
                 <span class="city-tag">Ceará</span>
             </a>
         </div>
